@@ -1,0 +1,18 @@
+### Lấy danh sách bài tập
+GET http://localhost:5000/api/assignments
+
+### Đọc lượt nộp hợp lệ
+GET http://localhost:5000/api/submissions/{{submissionId}}
+
+### Đọc lượt nộp không tồn tại
+GET http://localhost:5000/api/submissions/11111111-1111-1111-1111-111111111111
+
+### Gửi bài nộp mới
+POST http://localhost:5000/api/submissions
+Content-Type: application/json
+
+{
+  "assignmentId": 1,
+  "studentCode": "SE123",
+  "repositoryUrl": "https://github.com/demo/repo"
+}
